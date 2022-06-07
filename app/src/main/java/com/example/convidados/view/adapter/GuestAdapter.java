@@ -48,7 +48,7 @@ public class GuestAdapter extends RecyclerView.Adapter<GuestViewHolder> {
 
     public void attachList(List<GuestModel> list){
         this.mList = list;
-        notifyDataSetChanged();
+        notifyDataSetChanged(); //CRIA TODO O PROCESSO NOVAMENTE SE HÁ ALTERAÇÃO
 
     }
 

@@ -27,10 +27,10 @@ public class AllGuestsViewModel extends AndroidViewModel {
 
     public AllGuestsViewModel(@NonNull Application application) {
         super( application );
-        this.mRepository = GuestRepository.getInstance( application.getApplicationContext() );
+        this.mRepository = new GuestRepository( application.getApplicationContext() );
     }
 
-    public void getList(int filter){
+    public void getList(int filter){ //CARREGA A LISTA
         if ( filter == GuestConstants.CONFIRMATION.NOT_CONFIRMED){
             this.mGuestList.setValue(this.mRepository.getAll());
         } else if (filter == GuestConstants.CONFIRMATION.PRESENT){

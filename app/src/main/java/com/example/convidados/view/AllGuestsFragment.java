@@ -67,7 +67,7 @@ public class AllGuestsFragment extends Fragment {
         }
 
         this.observers();
-        this.mViewModel.getList(mFilter);
+        this.mViewModel.getList(mFilter);//INVOCA O METODO PARA CARREGAR A LISTA
 
         return root;
     }
@@ -94,6 +94,7 @@ public class AllGuestsFragment extends Fragment {
         } );
     }
 
+    //MAPEANDO O ELEMENTO DE INTERFACE
     private static class ViewHolder{
         RecyclerView recyclerGuests;
 
